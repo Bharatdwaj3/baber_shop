@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body>
+
+  <h3>This is the Welcome Page</h3>
+  <div th:if="${loggedIn}">
+    <h2>Welcome Back, <span th:text="${username}">User</span>!!</h2>
+    <form th:action="@{/logout}" method="get">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+  <a th:href="@{/profile}">Check your Profile</a>
+</body>
+
+</html>
